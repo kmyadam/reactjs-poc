@@ -1,0 +1,111 @@
+<html>
+
+    <title>A simple HTML Form</title>
+</head>
+<body>
+    <body style="background-color:hsla(0,100%,30%,0.1);">
+    <h1 style="text-align:center;" "width:100%">STATION LIST</h1>
+	
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	
+	<link rel= "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	<link rel= "stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+	
+</head>
+<body>
+<div class= "container">
+<div class= "table-responsive">
+<div id="result"></div>
+		<ul id="users"></ul>
+    
+  
+<br/>
+
+
+
+<table class="table table-bordered table-striped" id="employee_table">
+    
+            <tr>
+                <th>ACTION</th> 
+				<th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        
+             </table>
+
+          </div>
+     </div>
+	 
+	 
+	<input type="button" onclick="insert(this)" value="button"/>
+
+
+<td><button class="btnSelect">View</button></td>
+
+<script>
+$(document).ready(function(){
+
+ $('#btnSelect').click(function(){
+     $(location).attr('href','view.html')
+     
+    });
+
+	
+
+	
+$("#onView").on("click", "td", function() { alert("hello world!") });
+
+	$.getJSON('emp.json', function(data){
+	
+	var employee_data = '';
+	console.log(data);
+		$.each(data, function(key, value){
+			employee_data += '<tr>';
+			
+			employee_data += '<td><button class="btnSelect">View</button></td>';
+			employee_data += '<td>'+value.name+'</td>';
+			employee_data += '<td>'+value.position+'</td>';
+			employee_data += '<td>'+value.office+'</td>';
+			employee_data += '<td>'+value.extn+'</td>';
+			employee_data += '<td>'+value.startdate+'</td>';
+			employee_data += '<td>'+value.salary+'</td>';
+			employee_data += '</tr>';
+		});
+				
+					$('#employee_table').append(employee_data);
+				});
+			
+    $("#employee_table").on('click','.btnSelect',function(){
+     
+         var currentRow=$(this).closest("tr"); 
+         
+        
+         var col1=currentRow.find("td:eq(1)").text(); // get current row 2nd TD
+         var col2=currentRow.find("td:eq(2)").text(); // get current row 3rd TD
+		 var col3=currentRow.find("td:eq(3)").text(); // get current row 4st TD value
+         var col4=currentRow.find("td:eq(4)").text(); // get current row 5st TD value
+         var col5=currentRow.find("td:eq(5)").text(); // get current row 6st TD value
+         var col6=currentRow.find("td:eq(6)").text(); // get current row 7st TD value
+         var col7=currentRow.find("td:eq(7)").text(); // get current row 8st TD value
+         var col8=currentRow.find("td:eq(8)").text(); // get current row 1st TD value
+     
+         var data=col1+"\n"+col2+"\n"+col3+"\n"+col4+"\n"+col5+"\n"+col6+"\n"+col7+"\n"+col8;
+         
+         alert(data);
+		 
+		
+    });
+ });
+
+ 
+ function insert(button){
+        $(button).appendTo($('td.onView'));
+    }
+
+</script>
+</body>
+</html>

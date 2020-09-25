@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>A simple HTML Edit Form</title>
+</head>
+<body>
+    <body style="background-color:hsla(0,50%,30%,0.1);">
+    <h1 style="text-align:center;" "width:100%">EDIT STATION </h1>
+	<link rel="stylesheet" type="text/css" href="D:\practise\css\style.css"/>
+	</body>
+		<table>
+    <tr>
+        <td width="100"><label for="name">Name:</label>
+        <input type="text" id="name" name="name"></td>
+	</tr><tr>	
+        <td>Position:<select id="myselection" "width:100%" height: 100%;> </p>
+                    <option value="System Architect">System Architect</option> 
+                    <option value="Accountant">Accountant</option> 
+                    <option value="Junior Technical Author">Junior Technical Author</option>
+                    <option value="Senior Javascript Developer">Senior Javascript Developer</option> 	
+					<option value="Integration Specialist">Integration Specialist</option> 
+                    <option value="Sales Assistant">Sales Assistant</option>
+					<option value="Software Engineer">Software Engineer</option> 
+                    <option value="Regional Director">Regional Director</option> 					
+                 </select> </td>
+    </tr>
+    <tr>
+        <td width="100"><label for="ofc">Office:</label>
+<input type="text" id="ofc" name="ofc"></td>		  
+    </tr><tr>
+        <td width="100"><label for="ext">Extn.:</label>
+          <input type="text" id="ext" name="ext"></td>
+    </tr>
+	<tr>
+        <td width="100"><label for="date">Start Date:</label>
+		  <input type="date" id="date" name="date"></td>
+        
+    </tr>
+    <tr>
+        <td width="100"><label for="sal">Salary:</label>
+          <input type="text" id="sal" name="sal"></td>
+        <td></td>
+    </tr>
+</table> 
+	    
+		
+		<br>
+		<br>
+		<br>
+        <button type="button" onclick="alert('Saved!')">Save</button>
+       <input type=button onClick="location.href='view.html'" value='Back'>
+	
+</body>	
+<script src="D:\practise\js\table.js"></script>
+ <script src="<s:url value="https://code.jquery.com/jquery-3.5.1.js"/>"></script>
+		 <script src="<s:url value="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"/>"></script>
+		
+</html>

@@ -1,6 +1,3 @@
-# reactjs-poc
-Simple POC on ReactJS with Typescript
-
 # Assignment on ReactJS with Type Script:
 * Welcome Page with Name text box and ENTER button
 * Contact form with below fields

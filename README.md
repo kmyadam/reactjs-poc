@@ -1,26 +1,2 @@
-# reactjs-poc
-Simple POC on ReactJS with Typescript
-
-# Assignment on ReactJS with Type Script:
-* Welcome Page with Name text box and ENTER button
-* Contact form with below fields
-	* First Name - Text field
-	* Last Name - Text field
-	* Email - Text field
-	* Mobile -  - Text field
-	* DOB - Date Picker
-	* Gender - drop down
-	* City - Text field
-	
-	* Submit and Clear BUTTONS
-	
-* Submit Page
-	* Show all the data in read only mode
-	* BUTTONS to go back to welcome page and contact form
-	
-# Technologies:
-* ReactJS
-* Typescript
-* NodeJS Server
-* Visual Studio Code Editor
-* GitHub Repository
+# ReactButtonExample
+React js on button click navigates to a new page using History
